@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
-    <div>
-      About
-    </div>
-  )
-}
+    <main className="container section">
+      <section className="about">
+        <h2 className="section__title">
+          About <span>Me </span>
+        </h2>
+      </section>
+    </main>
+  );
+};
 
-export default About
+export default About;
