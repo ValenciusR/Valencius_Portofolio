@@ -2,8 +2,8 @@ import React from "react";
 import {
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
-  FaFacebookF,
-  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
   FaYoutube,
   FaDribbble,
 } from "react-icons/fa";
@@ -24,7 +24,7 @@ const Contact = () => {
           <h3 className="contact__title">Don't be Shy!</h3>
 
           <p className="contact__description">
-            Feel free to get in touch with me. I am alwats open to discussing
+            Feel free to get in touch with me. I am always open to discussing
             new projects, creative ideas or opportunities to be part of your
             visions.
           </p>
@@ -34,7 +34,7 @@ const Contact = () => {
               <FaEnvelopeOpen className="info__icon" />
               <div>
                 <span className="info__title">Mail Me</span>
-                <h4 className="info__desc">steve@gmail.com</h4>
+                <h4 className="info__desc">valencius.rianto25@gmail.com</h4>
               </div>
             </div>
 
@@ -42,23 +42,23 @@ const Contact = () => {
               <FaPhoneSquareAlt className="info__icon" />
               <div>
                 <span className="info__title">Call Me</span>
-                <h4 className="info__desc">steve@gmail.com</h4>
+                <h4 className="info__desc">+62 852 1812 2644</h4>
               </div>
             </div>
           </div>
 
           <div className="contact__social">
-            <a href="https://facebook.com" className="contact__social-link">
-              <FaFacebookF />
+            <a
+              href="https://www.linkedin.com/in/valencius-rianto/"
+              className="contact__social-link"
+            >
+              <FaLinkedinIn />
             </a>
-            <a href="https://x.com" className="contact__social-link">
-              <FaTwitter />
-            </a>
-            <a href="https://youtube.com" className="contact__social-link">
-              <FaYoutube />
-            </a>
-            <a href="https://dribbble.com" className="contact__social-link">
-              <FaDribbble />
+            <a
+              href="https://github.com/ValenciusR"
+              className="contact__social-link"
+            >
+              <FaGithub />
             </a>
           </div>
         </div>
@@ -79,14 +79,6 @@ const Contact = () => {
                 placeholder="Your Email"
                 className="form__control"
               />
-            </div>
-
-            <div className="form__input-div">
-              <input
-                type="text"
-                placeholder="Your Message"
-                className="form__control"
-              ></input>
             </div>
           </div>
 

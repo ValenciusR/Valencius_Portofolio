@@ -2,7 +2,7 @@ import React from "react";
 import { FaDownload } from "react-icons/fa";
 import Info from "../../components/Info";
 import Stats from "../../components/Stats";
-import CV from "../../assets/steve-Cv.pdf";
+import CV from "../../assets/valenciusCV.pdf";
 import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItem from "../../components/ResumeItem";
@@ -46,6 +46,8 @@ const About = () => {
           <Skills />
         </div>
       </section>
+
+      <div className="seperator"></div>
 
       <section className="resume">
         <h3 className="section__subtitle subtitle__center">
