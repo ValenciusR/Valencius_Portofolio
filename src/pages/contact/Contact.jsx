@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
@@ -12,7 +12,40 @@ import { FiSend } from "react-icons/fi";
 
 import "./contact.css";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_x05py9n";
+    const templateId = "template_o4hh5f4";
+    const publicKey = "YWIu-LAjBY7S5V3_T";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "Valencius Rianto",
+      message: message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully", response.status, response.text);
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("Email sent failed", error);
+      });
+  };
+
   return (
     <section className="contact section">
       <h2 className="section__title">
@@ -63,21 +96,25 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact__form">
+        <form onSubmit={handleSubmit} className="contact__form">
           <div className="form__input-group">
             <div className="form__input-div">
               <input
                 type="text"
+                value={name}
                 placeholder="Your Name"
                 className="form__control"
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
 
             <div className="form__input-div">
               <input
                 type="email"
+                value={email}
                 placeholder="Your Email"
                 className="form__control"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -85,11 +122,13 @@ const Contact = () => {
           <div className="form__input-div">
             <textarea
               placeholder="Your Message"
+              value={message}
               className="form__control textarea"
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
 
-          <button className="button">
+          <button type="submit" className="button">
             Send Message{" "}
             <span className="button__icon contact__button-icon">
               <FiSend />

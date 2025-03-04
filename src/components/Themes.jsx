@@ -61,7 +61,7 @@ const Themes = () => {
           {theme === "light-theme" ? <BsMoon /> : <BsSun />}
         </div>
 
-        <h3 className="style__switcher-title">Style Switcher</h3>
+        <div className="style__switcher-title">Style Switcher</div>
         <div className="style__switcher-items">
           {themes.map((theme, index) => {
             return (
