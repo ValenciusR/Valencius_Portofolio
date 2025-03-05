@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import Info from "../../components/Info";
 import Stats from "../../components/Stats";
@@ -9,6 +9,17 @@ import ResumeItem from "../../components/ResumeItem";
 import "./about.css";
 
 const About = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className="container section">
       <section className="about">
@@ -51,7 +62,7 @@ const About = () => {
 
       <section className="resume">
         <h3 className="section__subtitle subtitle__center">
-          Experience & Education
+          {isMobile ? "Experience" : "Experience & Education"}
         </h3>
 
         <div className="grid resume__container">
@@ -62,6 +73,12 @@ const About = () => {
               }
             })}
           </div>
+
+          {isMobile && <div className="seperator__resume"></div>}
+
+          {isMobile && (
+            <h3 className="section__subtitle subtitle__center">Education</h3>
+          )}
 
           <div className="resume__data">
             {resume.map((val) => {
