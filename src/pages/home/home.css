@@ -1,68 +1,71 @@
-.home {
-  grid-template-columns: 2fr;
-  align-items: center;
-  padding: 40px;
-  height: 100vh;
-}
+@media screen and (max-width: 1024px) {
+  .home {
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 100vh;
+    /* padding: 40px; */
+  }
 
-.home__img {
-  z-index: 1;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 30px;
-  box-shadow: 0 0 8px var(--boxShadow-color);
-  margin-inline: auto;
-}
+  .home__img {
+    z-index: 1;
+    width: 80%;
+    /* height: 400px; */
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 0 8px var(--boxShadow-color);
+    margin-inline: auto;
+  }
 
-.home__data {
-  max-width: 600px;
-  margin-inline: auto;
-  padding-top: 20px;
-}
+  .home__data {
+    max-width: auto;
+    margin-inline: auto;
+    padding: 0px 40px 40px 70px;
+  }
 
-.home__title {
-  position: relative;
-  font-size: var(--h1-font-size);
-  line-height: 1.24;
-  padding-left: 70px;
-}
+  .home__title {
+    position: relative;
+    font-size: var(--h2-font-size);
+    line-height: 1.24;
+    padding-left: 70px;
+  }
 
-.home__title span {
-  color: var(--first-color);
-}
+  .home__title span {
+    color: var(--first-color);
+  }
 
-.home__title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 22%;
-  width: 40px;
-  height: 5px;
-  border-radius: 10px;
-  background-color: var(--first-color);
-}
+  .home__title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22%;
+    width: 40px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--first-color);
+  }
 
-.home__description {
-  line-height: 2.125;
-  margin-block: 16px 32px;
-}
+  .home__description {
+    line-height: 2.125;
+    margin-block: 16px 32px;
+  }
 
-.button {
-  display: block;
-  width: max-content;
-  margin-inline: auto;
-}
+  .button {
+    display: block;
+    width: max-content;
+    margin-inline: auto;
+  }
 
-/* .color__block {
-  position: fixed;
-  height: 200%;
-  width: 100%;
-  background-color: var(--first-color);
-  top: -50%;
-  left: -83%;
-  transform: rotate(-15deg);
-  z-index: -1000;
-}  */
+  .color__block {
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    background-color: var(--first-color);
+    top: -50%;
+    left: -100%;
+    transform: rotate(-15deg);
+    z-index: -1000;
+  }
+}
 
 @media screen and (min-width: 1024px) {
   .home {
