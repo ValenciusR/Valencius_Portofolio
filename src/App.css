@@ -102,10 +102,6 @@ img {
   gap: 30px;
 }
 
-.section {
-  /* padding-block: 70px; */
-}
-
 .section__title {
   font-size: var(--big-font-size);
   font-weight: var(--weight-800);
