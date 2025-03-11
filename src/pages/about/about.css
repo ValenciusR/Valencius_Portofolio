@@ -112,8 +112,8 @@
     padding-left: 60px;
   }
 
-  .resume__item:not(:last-child) {
-    margin-bottom: 50px;
+  .resume__item:not(:last-child) .resume__description {
+    padding-bottom: 50px;
   }
 
   .resume__item::before {
@@ -173,6 +173,7 @@
   .resume__description {
     font-size: var(--smaller-font-size);
     line-height: 1.6;
+    /* padding-bottom: 50px; */
   }
 }
 
@@ -312,8 +313,8 @@
     padding-left: 60px;
   }
 
-  .resume__item:not(:last-child) {
-    margin-bottom: 50px;
+  .resume__item:not(:last-child) .resume__description {
+    padding-bottom: 50px;
   }
 
   .resume__item::before {
