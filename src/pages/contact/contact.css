@@ -131,8 +131,8 @@
   }
 
   .contact__info {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     gap: 30px;
     margin-top: 20px;
@@ -202,6 +202,7 @@
     border-radius: 30px;
     font-size: var(--small-font-size);
     transition: all 0.3s ease;
+    min-width: 120px;
   }
 
   .form__control:focus {
