@@ -10,6 +10,8 @@ import {
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
 
 import PortoWebsite from "./assets/Portofolio-Website.jpeg";
+import Lokerin from "./assets/FeatureGraphicLokerin.png";
+import HerAlert from "./assets/FeatureGraphicHerAlert.png";
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -262,6 +264,60 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: "Preview : ",
         desc: "This Website",
+      },
+    ],
+  },
+  {
+    id: 2,
+    img: Lokerin,
+    title: "Lokerin Mobile App",
+    details: [
+      {
+        icon: <FiFileText />,
+        title: "Project : ",
+        desc: "Mobile Application",
+      },
+      {
+        icon: <FiUser />,
+        title: "Client : ",
+        desc: "Group Project",
+      },
+      {
+        icon: <FaCode />,
+        title: "Language : ",
+        desc: "Java, XML",
+      },
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: "-",
+      },
+    ],
+  },
+  {
+    id: 3,
+    img: HerAlert,
+    title: "HerAlert Mobile App",
+    details: [
+      {
+        icon: <FiFileText />,
+        title: "Project : ",
+        desc: "Mobile Application",
+      },
+      {
+        icon: <FiUser />,
+        title: "Client : ",
+        desc: "Group Project",
+      },
+      {
+        icon: <FaCode />,
+        title: "Language : ",
+        desc: "Java, XML",
+      },
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: "-",
       },
     ],
   },
