@@ -36,13 +36,13 @@ const Contact = () => {
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        console.log("Email sent successfully", response.status, response.text);
+        alert("Email sent successfully");
         setName("");
         setEmail("");
         setMessage("");
       })
       .catch((error) => {
-        console.error("Email sent failed", error);
+        alert("Email sent failed", error);
       });
   };
 
